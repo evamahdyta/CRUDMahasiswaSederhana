@@ -30,6 +30,7 @@ public class MahasiswaController implements MahasiswaInterface {
         st.executeUpdate();
         return o;
     }
+    
     @Override 
     public void update(Mahasiswa o) throws SQLException{
         st=ConnectionHelper.getConnection().prepareStatement("update mahasiswa set nama=?,alamat=? where nim=?");
@@ -38,12 +39,14 @@ public class MahasiswaController implements MahasiswaInterface {
         st.setString(3, o.getNim());
         st.executeUpdate();
     }
+    
     @Override 
     public void delete(String nim) throws SQLException{
         st=ConnectionHelper.getConnection().prepareStatement("delete from mahasiswa where nim=?");
         st.setString(1, nim);
         st.executeUpdate();
     }
+    
     @Override 
     public List<Mahasiswa> getAll() throws SQLException {
         Statement st=ConnectionHelper.getConnection().createStatement();

@@ -9,6 +9,10 @@ package com.mycompany.crudmahasiswasederhana.db.Models;
  * @author Eva Mahdyta Kiswana (21103059) 
  */
 public class Mahasiswa {
+    
+    public static Object getnama() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private String nim;
     private String nama; 
     private String alamat; 
@@ -21,21 +25,27 @@ public class Mahasiswa {
         this.nama = nama;
         this.alamat = alamat;
     }
+    
     public String getNim(){
         return nim;
     }
+    
     public void setNim(String nim){
         this.nim = nim;
     }
+    
     public String getNama(){
         return nama;
     }
+    
     public void setNama(String nama){
         this.nama = nama;
     }
+    
     public String getAlamat(){
         return alamat;
     }
+    
     public void setAlamat(String alamat){
         this.alamat = alamat;
     }
